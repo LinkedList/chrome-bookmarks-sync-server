@@ -1,0 +1,17 @@
+extends layout
+
+block content
+	div(class="header")
+		div(class="pure-menu pure-menu-open pure-menu-horizontal folders")
+				ul
+					each folder in user.folders
+						li
+							a(href="#" class="folder" id="#{folder.id}") #{folder.title}
+					li
+						form(class="pure-form search")
+							input(id="search" type="text" placeholder="Search in title and url" autocomplete="off")
+
+	div(class="content")
+		ul(class="bookmarks")
+		button(class="pure-button" class="addPage" id="addPage") Load more
+

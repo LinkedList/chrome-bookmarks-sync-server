@@ -1,0 +1,22 @@
+{
+  "name": "chrome-bookmarks-save",
+  "description": "Save your chrome bookmarks and view them from anywhere",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "nodemon server.js --ignore static/"
+  },
+  "dependencies": {
+    "express": "latest",
+    "passport": "latest",
+    "passport-google": "latest",
+    "mongoose": "latest",
+    "jade": "latest"
+  },
+  "devDependencies": {
+    "grunt": "latest",
+    "grunt-contrib-jshint": "latest",
+    "grunt-contrib-uglify": "latest",
+    "grunt-contrib-concat": "latest"
+  }
+}

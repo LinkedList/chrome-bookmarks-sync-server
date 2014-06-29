@@ -1,0 +1,58 @@
+.bookmark {
+	text-decoration: none;
+	padding: 0.2em;
+	color : #4a4444;
+}
+
+.bookmark:visited {
+	color:#b5b0b0;
+}
+
+.bookmark:hover {
+	background: #eee;
+}
+
+.bookmarks {
+	list-style: none;
+	padding-left: 1em;
+	clear:both;
+}
+
+.content {
+	max-width: 1200px;
+	margin-bottom: 0px;
+}
+
+.header {
+	padding-top: 0px;
+}
+
+.folders .pure-menu-selected a {
+	background: #eee;
+}
+
+.pure-menu li a {
+	padding: 10px 20px 11px 20px;
+}
+
+.search {
+	float: right;
+}
+
+#search {
+	margin: 5px 0 5px 0;
+}
+
+.hostname {
+	font-size:75%;
+	color: #b5b0b0;
+}
+
+.addPage {
+	margin-bottom: 20px;
+}
+
+img {
+	position: relative;
+	top:2px;
+}

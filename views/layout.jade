@@ -1,0 +1,32 @@
+html
+	head
+		link(rel="stylesheet" href="css/pure-min.css")
+		link(rel="stylesheet" href="css/side-menu.css")
+		link(rel="stylesheet" href="css/authenticated.css")
+		link(rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css")
+		meta(id="key" data-key="#{user._id}")
+	body
+		div(id="layout")
+			div(id="menu")
+				div(href="#menu" id="menuLink" class="menu-link")
+					span
+				div(class="pure-menu pure-menu-open")
+					a(class="pure-menu-heading" href="/authenticated") Bookmarks
+					ul
+						li(id="settings_menu")
+							a(href="/settings") Settings
+						li(class="menu-item-divided")
+							a(href="/logout") Logout
+			div(id="main")
+				block content
+
+		script(type="text/javascript")
+			|folders = !{JSON.stringify(user.folders)};
+			|bookmarks = !{JSON.stringify(user.bookmarks)};
+		if settings.env === 'development'
+			script(src="/js/jquery.js")
+			script(src="/js/sideMenu.js")
+			script(src="/js/fuse.min.js")
+			script(src="/js/authenticated.js")
+		else
+			script(src="/js/js.min.js")
